@@ -1,11 +1,12 @@
+import { ArrowRight, Bot, Cloud, LayoutDashboard, MessageCircle, Palette, Smartphone } from 'lucide-react'
 import './App.css'
 
 function App() {
   const services = [
-    'Pengembangan Aplikasi Mobile',
-    'Pengembangan Website & Dashboard',
-    'Desain Produk UI/UX',
-    'Integrasi API, Cloud, dan Otomasi',
+    { title: 'Pengembangan Aplikasi Mobile', icon: Smartphone },
+    { title: 'Pengembangan Website & Dashboard', icon: LayoutDashboard },
+    { title: 'Desain Produk UI/UX', icon: Palette },
+    { title: 'Integrasi API, Cloud, dan Otomasi', icon: Cloud },
   ]
 
   const projects = [
@@ -15,6 +16,11 @@ function App() {
   ]
 
   const stacks = ['React', 'Next.js', 'Laravel', 'Node.js', 'Flutter', 'Kotlin', 'Swift', 'AWS']
+  const heroHighlights = [
+    'Riset kebutuhan bisnis',
+    'Desain antarmuka bersih',
+    'Development siap produksi',
+  ]
 
   return (
     <main>
@@ -39,23 +45,32 @@ function App() {
             aplikasi mobile, backend, serta sistem cloud dari ide sampai produksi.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="https://wa.me/6285878534229">Konsultasi via WhatsApp</a>
-            <a className="button secondary" href="#services">Lihat Layanan</a>
+            <a className="button primary" href="https://wa.me/6285878534229">
+              <MessageCircle size={18} aria-hidden="true" />
+              Konsultasi via WhatsApp
+            </a>
+            <a className="button secondary" href="#services">
+              Lihat Layanan
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
           </div>
         </div>
-        <div className="hero-card" aria-label="Pratinjau alur kerja Manacode">
-          <div className="card-topbar">
-            <span></span><span></span><span></span>
+        <div className="hero-panel" aria-label="Ringkasan layanan Manacode">
+          <div className="panel-icon">
+            <Bot size={28} aria-hidden="true" />
           </div>
-          <div className="metric-card">
-            <p>Progres Sprint</p>
-            <strong>92%</strong>
-            <div className="progress"><span></span></div>
-          </div>
-          <div className="code-panel">
-            <span>rilis.produksi()</span>
-            <span>status: online</span>
-          </div>
+          <h2>Partner teknologi untuk produk digital yang terasa sederhana.</h2>
+          <p>
+            Kami bantu menyusun arah, membuat tampilan, membangun sistem, dan menyiapkan rilis tanpa proses yang berantakan.
+          </p>
+          <ul>
+            {heroHighlights.map((item) => (
+              <li key={item}>
+                <span aria-hidden="true"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -74,13 +89,18 @@ function App() {
           <h2>Pengembangan produk digital end-to-end untuk bisnis yang serius bertumbuh.</h2>
         </div>
         <div className="service-grid">
-          {services.map((service, index) => (
-            <article className="service-card" key={service}>
+          {services.map((service, index) => {
+            const Icon = service.icon
+
+            return (
+            <article className="service-card" key={service.title}>
+              <Icon className="service-icon" size={24} aria-hidden="true" />
               <span>0{index + 1}</span>
-              <h3>{service}</h3>
+              <h3>{service.title}</h3>
               <p>Strategi, arsitektur, desain, development, testing, dan dukungan rilis dalam alur kerja yang jelas.</p>
             </article>
-          ))}
+            )
+          })}
         </div>
       </section>
 
@@ -108,7 +128,10 @@ function App() {
         <p className="eyebrow">Siap mulai?</p>
         <h2>Ceritakan ide aplikasi Anda ke Manacode.</h2>
         <p>Dari MVP sampai platform bisnis, kami bantu susun arah teknis dan eksekusi yang bersih.</p>
-        <a className="button primary" href="https://wa.me/6285878534229">WhatsApp 0858-7853-4229</a>
+        <a className="button primary" href="https://wa.me/6285878534229">
+          <MessageCircle size={18} aria-hidden="true" />
+          WhatsApp 0858-7853-4229
+        </a>
       </section>
     </main>
   )
