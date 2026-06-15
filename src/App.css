@@ -6,7 +6,7 @@ main {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 28px 0;
+  padding: 24px 0;
 }
 
 .brand,
@@ -19,19 +19,21 @@ main {
 
 .brand {
   color: var(--text-strong);
-  font-weight: 800;
+  font-weight: 600;
   gap: 10px;
   text-decoration: none;
 }
 
 .brand span {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: 14px;
-  color: white;
+  background: var(--text-strong);
+  border-radius: 50%;
+  color: var(--surface);
   display: grid;
-  height: 42px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  height: 38px;
   place-items: center;
-  width: 42px;
+  width: 38px;
 }
 
 .nav-links {
@@ -41,16 +43,16 @@ main {
 .nav-links a {
   color: var(--text-muted);
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .hero {
   display: grid;
-  gap: 64px;
+  gap: 70px;
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  min-height: 76vh;
-  padding: 88px 0 72px;
+  min-height: 78vh;
+  padding: 92px 0 84px;
   place-items: center;
 }
 
@@ -61,7 +63,8 @@ main {
 .eyebrow {
   color: var(--primary);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-family: var(--mono);
+  font-weight: 700;
   letter-spacing: 0.16em;
   margin: 0 0 16px;
   text-transform: uppercase;
@@ -69,8 +72,9 @@ main {
 
 .hero-copy {
   color: var(--text-muted);
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.12rem;
+  line-height: 1.75;
   max-width: 640px;
 }
 
@@ -81,17 +85,18 @@ main {
 }
 
 .button {
-  border-radius: 999px;
+  border-radius: 12px;
   display: inline-flex;
-  font-weight: 800;
-  padding: 14px 22px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  padding: 13px 20px;
   text-decoration: none;
 }
 
 .primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  box-shadow: 0 20px 50px rgba(37, 99, 235, 0.28);
-  color: white;
+  background: var(--text-strong);
+  box-shadow: 0 18px 42px rgba(36, 27, 21, 0.18);
+  color: var(--surface);
 }
 
 .secondary {
@@ -101,9 +106,9 @@ main {
 }
 
 .hero-card {
-  background: linear-gradient(145deg, rgba(255,255,255,0.94), rgba(239,246,255,0.82));
-  border: 1px solid rgba(148, 163, 184, 0.32);
-  border-radius: 34px;
+  background: linear-gradient(145deg, rgba(255,252,244,0.96), rgba(238,230,215,0.72));
+  border: 1px solid var(--border);
+  border-radius: 24px;
   box-shadow: var(--shadow);
   max-width: 420px;
   padding: 22px;
@@ -112,7 +117,7 @@ main {
 }
 
 .hero-card::before {
-  background: radial-gradient(circle, rgba(20,184,166,0.28), transparent 62%);
+  background: radial-gradient(circle, rgba(193, 95, 60, 0.2), transparent 62%);
   content: '';
   height: 260px;
   position: absolute;
@@ -144,7 +149,7 @@ main {
 }
 
 .metric-card {
-  border-radius: 28px;
+  border-radius: 20px;
   padding: 28px;
 }
 
@@ -156,14 +161,15 @@ main {
 .metric-card strong {
   color: var(--text-strong);
   display: block;
-  font-size: 4rem;
-  letter-spacing: -0.08em;
+  font-size: 3.8rem;
+  font-weight: 500;
+  letter-spacing: -0.07em;
   line-height: 1;
   margin-top: 18px;
 }
 
 .progress {
-  background: #e2e8f0;
+  background: var(--surface-muted);
   border-radius: 999px;
   height: 10px;
   margin-top: 24px;
@@ -178,7 +184,7 @@ main {
 }
 
 .code-panel {
-  border-radius: 22px;
+  border-radius: 18px;
   color: var(--text-strong);
   display: grid;
   font-family: var(--mono);
@@ -205,6 +211,7 @@ main {
   color: var(--text-strong);
   display: block;
   font-size: 2.7rem;
+  font-weight: 500;
   letter-spacing: -0.06em;
 }
 
@@ -228,7 +235,7 @@ main {
 }
 
 .service-card {
-  border-radius: 28px;
+  border-radius: 20px;
   padding: 28px;
 }
 
@@ -241,6 +248,7 @@ main {
 .process-list p,
 .cta p {
   color: var(--text-muted);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.75;
 }
 
@@ -276,14 +284,15 @@ main {
 .stack-list span {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 12px;
   color: var(--text-strong);
-  font-weight: 800;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
   padding: 12px 18px;
 }
 
 .cta {
-  border-radius: 36px;
+  border-radius: 24px;
   margin: 0 0 72px;
   padding: 56px;
   text-align: center;

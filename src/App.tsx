@@ -2,64 +2,64 @@ import './App.css'
 
 function App() {
   const services = [
-    'Mobile App Development',
-    'Web Platform Engineering',
-    'UI/UX Product Design',
-    'Cloud & API Integration',
+    'Pengembangan Aplikasi Mobile',
+    'Pengembangan Website & Dashboard',
+    'Desain Produk UI/UX',
+    'Integrasi API, Cloud, dan Otomasi',
   ]
 
   const projects = [
-    { value: '25+', label: 'digital products shipped' },
-    { value: '12', label: 'business domains served' },
-    { value: '99%', label: 'delivery transparency' },
+    { value: '25+', label: 'produk digital siap rilis' },
+    { value: '12', label: 'bidang bisnis terbantu' },
+    { value: '99%', label: 'proses kerja transparan' },
   ]
 
   const stacks = ['React', 'Next.js', 'Laravel', 'Node.js', 'Flutter', 'Kotlin', 'Swift', 'AWS']
 
   return (
     <main>
-      <nav className="nav" aria-label="Main navigation">
-        <a className="brand" href="#top" aria-label="Manacode home">
+      <nav className="nav" aria-label="Navigasi utama">
+        <a className="brand" href="#top" aria-label="Beranda Manacode">
           <span>MC</span>
           Manacode
         </a>
         <div className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Contact</a>
+          <a href="#services">Layanan</a>
+          <a href="#work">Proses</a>
+          <a href="#contact">Kontak</a>
         </div>
       </nav>
 
       <section className="hero" id="top">
         <div className="hero-content">
-          <p className="eyebrow">App Developer Company</p>
-          <h1>Build apps that launch faster, scale cleaner, and feel premium.</h1>
+          <p className="eyebrow">Perusahaan Developer Apps</p>
+          <h1>Buat aplikasi yang rapi, cepat rilis, dan siap berkembang.</h1>
           <p className="hero-copy">
-            Manacode helps founders and businesses design, build, and ship modern web,
-            mobile, backend, and cloud products from idea to production.
+            Manacode membantu bisnis merancang, membangun, dan meluncurkan website,
+            aplikasi mobile, backend, serta sistem cloud dari ide sampai produksi.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#contact">Start Project</a>
-            <a className="button secondary" href="#services">Explore Services</a>
+            <a className="button primary" href="https://wa.me/6285878534229">Konsultasi via WhatsApp</a>
+            <a className="button secondary" href="#services">Lihat Layanan</a>
           </div>
         </div>
-        <div className="hero-card" aria-label="Manacode delivery dashboard preview">
+        <div className="hero-card" aria-label="Pratinjau alur kerja Manacode">
           <div className="card-topbar">
             <span></span><span></span><span></span>
           </div>
           <div className="metric-card">
-            <p>Delivery Sprint</p>
+            <p>Progres Sprint</p>
             <strong>92%</strong>
             <div className="progress"><span></span></div>
           </div>
           <div className="code-panel">
-            <span>deploy.production()</span>
-            <span>status: live</span>
+            <span>rilis.produksi()</span>
+            <span>status: online</span>
           </div>
         </div>
       </section>
 
-      <section className="stats" aria-label="Company highlights">
+      <section className="stats" aria-label="Ringkasan perusahaan">
         {projects.map((item) => (
           <div className="stat" key={item.label}>
             <strong>{item.value}</strong>
@@ -70,15 +70,15 @@ function App() {
 
       <section className="section" id="services">
         <div className="section-heading">
-          <p className="eyebrow">What we build</p>
-          <h2>Full-cycle product development for serious digital teams.</h2>
+          <p className="eyebrow">Yang kami kerjakan</p>
+          <h2>Pengembangan produk digital end-to-end untuk bisnis yang serius bertumbuh.</h2>
         </div>
         <div className="service-grid">
           {services.map((service, index) => (
             <article className="service-card" key={service}>
               <span>0{index + 1}</span>
               <h3>{service}</h3>
-              <p>Strategy, architecture, development, testing, and launch support in one focused workflow.</p>
+              <p>Strategi, arsitektur, desain, development, testing, dan dukungan rilis dalam alur kerja yang jelas.</p>
             </article>
           ))}
         </div>
@@ -86,29 +86,29 @@ function App() {
 
       <section className="section split" id="work">
         <div>
-          <p className="eyebrow">How we work</p>
-          <h2>Clean process. Clear milestones. Production-ready output.</h2>
+          <p className="eyebrow">Cara kerja</p>
+          <h2>Proses tenang, milestone jelas, hasil siap dipakai.</h2>
         </div>
         <div className="process-list">
-          <p><strong>01 Discover</strong> — product scope, user flow, and technical plan.</p>
-          <p><strong>02 Design</strong> — polished interface and validated experience.</p>
-          <p><strong>03 Develop</strong> — scalable codebase, API, mobile, web, and cloud setup.</p>
-          <p><strong>04 Launch</strong> — deployment, monitoring, documentation, and handover.</p>
+          <p><strong>01 Pemetaan</strong> — ruang lingkup produk, alur pengguna, dan rencana teknis.</p>
+          <p><strong>02 Desain</strong> — tampilan bersih, mudah dipakai, dan sesuai kebutuhan bisnis.</p>
+          <p><strong>03 Development</strong> — codebase scalable, API, mobile, web, dan cloud setup.</p>
+          <p><strong>04 Rilis</strong> — deployment, monitoring, dokumentasi, dan serah terima.</p>
         </div>
       </section>
 
       <section className="section stack-section">
-        <p className="eyebrow">Flexible stack</p>
+        <p className="eyebrow">Tech stack fleksibel</p>
         <div className="stack-list">
           {stacks.map((stack) => <span key={stack}>{stack}</span>)}
         </div>
       </section>
 
       <section className="cta" id="contact">
-        <p className="eyebrow">Ready to build?</p>
-        <h2>Tell Manacode about your app idea.</h2>
-        <p>From MVP to enterprise platform, we can shape technical direction and ship clean execution.</p>
-        <a className="button primary" href="mailto:hello@manacode.dev">hello@manacode.dev</a>
+        <p className="eyebrow">Siap mulai?</p>
+        <h2>Ceritakan ide aplikasi Anda ke Manacode.</h2>
+        <p>Dari MVP sampai platform bisnis, kami bantu susun arah teknis dan eksekusi yang bersih.</p>
+        <a className="button primary" href="https://wa.me/6285878534229">WhatsApp 0858-7853-4229</a>
       </section>
     </main>
   )
